@@ -1,0 +1,20 @@
+{
+  "files": [
+    ".gitignore",
+    "package.json",
+    "vite.config.js",
+    "eslint.config.js",
+    "README.md",
+    "tmp/todo.md",
+    "src/App.jsx",
+    "src/main.jsx",
+    "index.html",
+    "src/assets/styles/main.scss",
+    "src/assets/styles/utils/_variables.scss",
+    "src/assets/styles/utils/_mixins.scss",
+    "src/assets/styles/utils/_keyframes.scss",
+    "src/assets/styles/base/_reset.scss",
+    "src/assets/styles/base/_global.scss",
+    "src/assets/styles/base/_typography.scss"
+  ]
+}
