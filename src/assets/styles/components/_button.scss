@@ -38,4 +38,10 @@ button {
   &:active {
     background: lighten($blue, 20);
   }
+
+  &:disabled {
+    color: rgba($white, 0.5);
+    background-color: $neutral;
+    cursor: not-allowed;
+  }
 }

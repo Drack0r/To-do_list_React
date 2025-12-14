@@ -61,6 +61,24 @@
   & .message-ui {
     margin-bottom: 1em;
     visibility: hidden;
+
+    &--error {
+      visibility: visible;
+      color: $red;
+
+      &::before {
+        content: "⛔️ ";
+      }
+    }
+
+    &--success {
+      visibility: visible;
+      color: $green;
+
+      &::before {
+        content: "✅ ";
+      }
+    }
   }
 }
 

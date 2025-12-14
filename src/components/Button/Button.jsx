@@ -4,7 +4,12 @@ function Button({ type = "button", children, onClick, ...props }) {
 
   /* ========== Return ========== */
   return (
-    <button type={type} className={className} onClick={onClick}>
+    <button
+      type={type}
+      className={className}
+      onClick={onClick}
+      disabled={props.disabled}
+    >
       {children}
     </button>
   );
