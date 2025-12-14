@@ -1,0 +1,53 @@
+/* ====================
+  Task
+==================== */
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.task {
+  @include flex-align-center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em 0.5em 0;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: $box-shadow-small;
+
+  &__checkbox {
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__label {
+    @include flex-align-center;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      bottom: 1px;
+      height: 18px;
+      width: 18px;
+      margin-right: 1em;
+      border: 1px solid $black;
+      border-radius: 5px;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &__checkbox:checked + &__label::before {
+    background: rgba($black, 1);
+  }
+
+  &__checkbox:checked + &__label::after {
+    content: "✓";
+    position: absolute;
+    left: 1px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: $white;
+  }
+}

@@ -1,7 +1,20 @@
 /* ====================
   Global
 ==================== */
+@use "../utils/variables" as *;
 
 #root {
-  // border: 1px dashed black;
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem 1.5rem;
+  background: $bg-primary;
+
+  & > .add-button {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    border-radius: 50%;
+  }
 }

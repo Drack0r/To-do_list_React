@@ -1,0 +1,41 @@
+/* ====================
+  Button
+==================== */
+@use "../utils/variables" as *;
+
+button {
+  padding: 0.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.delete-button {
+  margin-left: auto;
+  color: $red;
+  background: rgba($gray, 0.1);
+  border-radius: 50%;
+
+  &:hover {
+    color: darken($red, 20);
+    background: rgba($gray, 0.3);
+  }
+
+  &:active {
+    color: lighten($red, 20);
+  }
+}
+
+.add-button {
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    background: darken($blue, 20);
+  }
+
+  &:active {
+    background: lighten($blue, 20);
+  }
+}
