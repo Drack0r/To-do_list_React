@@ -18,6 +18,24 @@ function App() {
   /* ========== Logic ========== */
   const currentDate = getCurrentDate();
 
+  const data = [
+    {
+      id: 1,
+      name: "Faire du sport",
+      isDone: false,
+    },
+    {
+      id: 2,
+      name: "Regarder un film",
+      isDone: false,
+    },
+    {
+      id: 3,
+      name: "Cuisiner un repas",
+      isDone: false,
+    },
+  ];
+
   /* ========== Return ========== */
   return (
     <>
@@ -25,7 +43,7 @@ function App() {
 
       <p className="current-date">{currentDate}</p>
 
-      <TaskList />
+      <TaskList tasklist={data} />
 
       <Button className="add-button" onClick={handleOpenModal}>
         <i className="fa-solid fa-plus"></i>

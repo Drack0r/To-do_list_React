@@ -16,7 +16,6 @@
 }
 
 .modal {
-  @include flex-column-align-center;
   position: relative;
   top: 25vh;
   width: 100%;
@@ -24,6 +23,27 @@
   background: $bg-primary;
   border-radius: 20px;
   box-shadow: $box-shadow-medium;
+
+  & .close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 1.2rem;
+    color: $red;
+
+    &:hover {
+      color: darken($red, 20);
+    }
+
+    &:active {
+      color: lighten($red, 20);
+    }
+  }
+
+  & form {
+    @include flex-column-align-center;
+    // position: relative;
+  }
 
   &__label {
     margin-bottom: 0.5em;

@@ -1,12 +1,13 @@
-import data from "../../data/tasklist.json";
 import Task from "../Task/Task";
 
-function TaskList() {
+function TaskList({ tasklist }) {
   /* ========== Logic ========== */
+
+  /* ========== Return ========== */
   return (
     <div className="tasklist-container">
       <ul className="tasklist">
-        {data.map((task) => (
+        {tasklist.map((task) => (
           <li key={task.id} className="tasklist__item">
             <Task>{task.name}</Task>
           </li>

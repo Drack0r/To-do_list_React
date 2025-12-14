@@ -5,28 +5,42 @@ function Modal({ isOpen, onClose }) {
   return (
     <>
       {isOpen && (
-        <div className="overlay">
+        <div
+          className="overlay"
+          onClick={(e) => {
+            // Fermer la modale si l'user clique sur l'overlay
+            if (e.target.classList.contains("overlay")) {
+              onClose();
+            }
+          }}
+        >
           <div className="modal">
-            <label className="modal__label" htmlFor="modalInput">
-              Nom de la tâche :
-            </label>
+            <Button className="close-button" onClick={onClose}>
+              <i className="fa-solid fa-xmark"></i>
+            </Button>
 
-            <input
-              type="text"
-              className="modal__input"
-              id="modalInput"
-              autoFocus
-            />
+            <form>
+              <label className="modal__label" htmlFor="modalInput">
+                Nom de la tâche :
+              </label>
 
-            <p className="message-ui">#</p>
+              <input
+                type="text"
+                className="modal__input"
+                id="modalInput"
+                autoFocus
+              />
 
-            <div className="modal__actions">
-              <Button className="add-button">Ajouter</Button>
+              <p className="message-ui">#</p>
 
-              <Button className="cancel-button" onClick={onClose}>
-                Annuler
-              </Button>
-            </div>
+              <div className="modal__actions">
+                <Button className="add-button">Ajouter</Button>
+
+                <Button className="cancel-button" type="reset">
+                  Annuler
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       )}
